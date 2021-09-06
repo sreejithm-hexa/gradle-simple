@@ -30,7 +30,7 @@ artifacts {
 }
 
 // To specify a license in the pom:
-install {
+/*install {
   repositories.mavenInstaller {
     pom.project {
       licenses {
@@ -42,7 +42,7 @@ install {
       }
     }
   }
-}
+}*/
 
 wrapper {
     gradleVersion = "6.1.1"
