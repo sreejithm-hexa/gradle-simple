@@ -21,6 +21,15 @@ artifactory {
         }
     }
 }
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            // from components.java
+            artifact file("build/libs/alfresco-1.0.0.jar")
+        }
+    }
+}
 buildscript {
    repositories {
      jcenter()
