@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'base'
 apply plugin: 'maven-publish'
-apply plugin: "com.jfrog.artifactory"
+apply plugin: 'artifactory-publish'
 
 
 group = 'com.github.jitpack'
