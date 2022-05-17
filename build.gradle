@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'base'
 apply plugin: 'maven-publish'
-apply plugin: 'artifactory-publish'
+apply plugin: "com.jfrog.artifactory"
 
 
 group = 'com.github.jitpack'
@@ -27,6 +27,7 @@ repositories {
 
 dependencies {
   implementation 'com.google.guava:guava:29.0-jre'
+  classpath "org.jfrog.buildinfo:build-info-extractor-gradle:latest.release"
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
