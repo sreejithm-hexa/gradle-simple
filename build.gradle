@@ -16,7 +16,6 @@ artifactory {
             repoKey = 'libs-snapshot'   // Artifactory repository key to publish to
             username = 'jenkins'      // publisher user name
             password = '@Admin123'       // publisher password
-            maven = true
         }
     }
 }
