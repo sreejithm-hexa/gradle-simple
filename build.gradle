@@ -10,6 +10,16 @@ version = '1.0.0'
 sourceCompatibility = 1.8 // java 8
 targetCompatibility = 1.8
 
+def file = layout.buildDirectory.file('build/libs/alfresco-1.0.0.jar')
+def rpmArtifact = artifacts.add('archives', rpmFile.get().asFile)
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact rpmArtifact
+        }
+    }
+}
 artifactory {
     contextUrl = 'http://18.117.228.7:8082/artifactory' // base artifactory url
     publish {
