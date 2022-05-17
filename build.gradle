@@ -11,7 +11,9 @@ sourceCompatibility = 1.8 // java 8
 targetCompatibility = 1.8
 
 def file = layout.buildDirectory.file('build/libs/alfresco-1.0.0.jar')
-def rpmArtifact = artifacts.add('archives', rpmFile.get().asFile)
+def rpmArtifact = artifacts.add('archives', rpmFile.get().asFile) {
+    type 'jar'
+}
 
 publishing {
     publications {
