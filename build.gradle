@@ -1,11 +1,25 @@
 apply plugin: 'java'
 apply plugin: 'base'
+apply plugin: 'maven-publish'
+apply plugin: "com.jfrog.artifactory"
 
 
 group = 'com.github.jitpack'
 
 sourceCompatibility = 1.8 // java 8
 targetCompatibility = 1.8
+
+artifactory {
+    contextUrl = 'http://18.117.228.7:8082/artifactory' // base artifactory url
+    publish {
+        repository {
+            repoKey = 'libs-snapshot'   // Artifactory repository key to publish to
+            username = 'jenkins'      // publisher user name
+            password = '@Admin123'       // publisher password
+            maven = true
+        }
+    }
+}
 
 repositories {
   mavenCentral()
